@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>The Orchard: S.Eng Assessment</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="content">
+                <div class="inner">
+                  {% for message in get_flashed_messages() %}
+                    <div class=flash>{{ message }}</div>
+                  {% endfor %}
+
+                  {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h2>Results</h2>
+
+
+    <h3>Top 10 Thai</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Borough</td>
+            <td>Phone</td>
+            <td>Cuisine</td>
+            <td>Grade</td>
+            <td>Grade Date</td>
+        </tr>
+        <thead>
+        <tbody>
+        {% for res in output_top_10 %}
+        <tr>
+            <td>{{ res.name }}</td>
+            <td>{{ res.building }} {{ res.street }} {{ res.zipcode }}</td>
+            <td>{{ res.boro }}</td>
+            <td>{{ res.phone }}</td>
+            <td>{{ res.cuisine }}</td>
+            <td>{{ res.grade }}</td>
+            <td>{{ res.grade_date }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Top 10 overall</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Borough</td>
+            <td>Phone</td>
+            <td>Cuisine</td>
+            <td>Grade</td>
+            <td>Grade Date</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for res in output_top_10_all %}
+        <tr>
+            <td>{{ res.name }}</td>
+            <td>{{ res.building }} {{ res.street }} {{ res.zipcode }}</td>
+            <td>{{ res.boro }}</td>
+            <td>{{ res.phone }}</td>
+            <td>{{ res.cuisine }}</td>
+            <td>{{ res.grade }}</td>
+            <td>{{ res.grade_date }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
