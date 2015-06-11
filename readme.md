@@ -1,7 +1,6 @@
 
 When doing pip install -r requirements.txt, you might get an error as 
-described in http://stackoverflow.com/questions/5178292/pip-install-m
-ysql-python-fails-with-environmenterror-mysql-config-not-found
+described in http://stackoverflow.com/questions/5178292/pip-install-mysql-python-fails-with-environmenterror-mysql-config-not-found
 
 The below helps to fix that error: 
 	easy_install mysql-python (mix os)
